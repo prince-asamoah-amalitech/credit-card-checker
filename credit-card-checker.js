@@ -84,8 +84,16 @@ const idInvalidCardCompanies = arrays => {
     return  self.indexOf(element) === index;
   });
 }
+const stringToNumber = string  => {
+  const numArray = [];
+  for (let i = 0; i < string.length; i++) {
+    numArray.push(parseInt(string[i]));
+  }
+    return numArray;
+}
 
-
-console.log(validateCred(myArray2));
+let num = stringToNumber('4604352661457876');
+// console.log(validateCred(myArray2));
 // console.log(findInvalidCards(batch));
 // console.log(idInvalidCardCompanies(batch));
+console.log(validateCred(num));
